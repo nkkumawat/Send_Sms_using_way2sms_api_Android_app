@@ -43,10 +43,6 @@ public class dataFetching extends AsyncTask  <String, Void, String> {
     protected String doInBackground(String... arg0) {
         String link;
         String data;
-//         id = "9660729583";
-//         pass = "ILOVENOKIA";
-//         mob = "9024444807";
-//         mess = "message from android app";
         BufferedReader bufferedReader;
         String result;
         try {
@@ -64,8 +60,9 @@ public class dataFetching extends AsyncTask  <String, Void, String> {
     @Override
     protected void onPostExecute(String result) {
         String jsonStr = result;
-        this.textView.setText("Sent Successfully");
+
         if (jsonStr != null) {
+            jsonStr = "Sent Successfully";
 //            try {
 //                JSONObject jsonObj = new JSONObject(jsonStr);
 //                String query_result = jsonObj.getString("query_result");
@@ -76,7 +73,8 @@ public class dataFetching extends AsyncTask  <String, Void, String> {
 //                Toast.makeText(context, "Check Your Internet Connection .", Toast.LENGTH_SHORT).show();
 //            }
         } else {
-            Toast.makeText(context, "Check Your Internet Connection .", Toast.LENGTH_SHORT).show();
+            jsonStr = "Check internet connection";
         }
+        this.textView.setText("Sent Successfully");
     }
 }

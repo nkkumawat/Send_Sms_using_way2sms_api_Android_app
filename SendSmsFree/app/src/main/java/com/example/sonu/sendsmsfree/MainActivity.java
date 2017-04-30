@@ -14,7 +14,7 @@ import android.widget.Toast;
 import java.net.URLEncoder;
 
 public class MainActivity extends AppCompatActivity {
-    Button send;
+    Button send , signup;
     EditText mobile , password ;
     TextView nk;
     DBHandler db;
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         send  = (Button)findViewById(R.id.send);
+        signup  = (Button)findViewById(R.id.signup);
         mobile = (EditText)findViewById(R.id.mobile);
         password = (EditText)findViewById(R.id.password);
         nk = (TextView) findViewById(R.id.nk);
@@ -35,12 +36,22 @@ public class MainActivity extends AppCompatActivity {
             intent.putExtra("id" , db.getDataMobile(1));
             intent.putExtra("pass" , db.getDataPass(1));
             startActivity(intent);
+            finish();
         }
 
         send.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 insert();
+            }
+        });
+
+        signup.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext() , signup.class);
+                startActivity(intent);
+                finish();
             }
         });
     }
@@ -50,6 +61,7 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra("id" , db.getDataMobile(1));
         intent.putExtra("pass" , db.getDataPass(1));
         startActivity(intent);
+        finish();
        // new dataFetching(this , nk).execute();
     }
 }

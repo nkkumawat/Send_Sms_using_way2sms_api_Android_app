@@ -12,8 +12,12 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="51dp"
-        android:text="Save"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/outline"
+        android:text="Login"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary"
         tools:layout_editor_absoluteX="148dp"
         tools:layout_editor_absoluteY="34dp" />
 
@@ -26,9 +30,14 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="40dp"
+        android:background="@drawable/outline"
         android:ems="10"
         android:hint="mobile no"
-        android:inputType="text" />
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary" />
 
     <EditText
         android:id="@+id/password"
@@ -39,9 +48,15 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:layout_marginTop="16dp"
+        android:background="@drawable/outline"
         android:ems="10"
         android:hint="password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:padding="10dp"
+        android:textColor="@color/colorPrimary"
+        android:textColorHighlight="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary" />
 
     <TextView
         android:id="@+id/nk"
@@ -49,5 +64,39 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/send"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="24dp"
+        android:text="not have an account ?"
+        android:textColor="@color/colorPrimary" />
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/send"
+        android:layout_below="@+id/textView"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/outline"
+        android:text="Signup"
+        android:textColor="@color/colorPrimary"
+        android:textColorHint="@color/colorPrimary"
+        android:textColorLink="@color/colorPrimary" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/signup"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:text="After signup  plaese come back to this activity   and save mobile no and password here to instant messaging"
+        android:textAlignment="center"
+        android:textColor="@color/colorPrimary" />
 
 </RelativeLayout>
